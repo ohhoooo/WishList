@@ -11,7 +11,7 @@ struct ProductDTO: Decodable {
     let id: Int
     let title: String
     let information: String
-    let price: Int
+    let price: Double
     let thumbnail: String
     
     private enum CodingKeys: String, CodingKey {
