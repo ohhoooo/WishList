@@ -8,9 +8,10 @@
 import Foundation
 
 extension Double {
-    func formatterStyle(_ numberStyle: NumberFormatter.Style) -> String? {
-        let numberFommater: NumberFormatter = NumberFormatter()
-        numberFommater.numberStyle = numberStyle
-        return numberFommater.string(for: self)
+    func formatterStyle(_ numberStyle: NumberFormatter.Style) -> String {
+        let numberFormatter: NumberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = numberStyle
+        numberFormatter.maximumFractionDigits = 3
+        return numberFormatter.string(for: self) ?? "0"
     }
 }

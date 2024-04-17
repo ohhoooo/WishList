@@ -20,6 +20,7 @@
 		371A7F4A2BCFB31200AB6075 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A7F482BCFB31200AB6075 /* Product+CoreDataProperties.swift */; };
 		371A7F4F2BCFC0BF00AB6075 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A7F4E2BCFC0BF00AB6075 /* NetworkManager.swift */; };
 		371A7F522BCFC54F00AB6075 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A7F512BCFC54F00AB6075 /* NetworkError.swift */; };
+		371A7F552BD014F200AB6075 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A7F542BD014F200AB6075 /* Double+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		371A7F482BCFB31200AB6075 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		371A7F4E2BCFC0BF00AB6075 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		371A7F512BCFC54F00AB6075 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		371A7F542BD014F200AB6075 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				371A7F292BCE8FC700AB6075 /* AppDelegate.swift */,
 				371A7F2B2BCE8FC700AB6075 /* SceneDelegate.swift */,
+				371A7F532BD013EF00AB6075 /* Extension */,
 				371A7F442BCE930B00AB6075 /* Model */,
 				371A7F432BCE930900AB6075 /* View */,
 				371A7F422BCE930700AB6075 /* Controller */,
@@ -134,6 +137,14 @@
 				371A7F512BCFC54F00AB6075 /* NetworkError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		371A7F532BD013EF00AB6075 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				371A7F542BD014F200AB6075 /* Double+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 				371A7F2A2BCE8FC700AB6075 /* AppDelegate.swift in Sources */,
 				371A7F4A2BCFB31200AB6075 /* Product+CoreDataProperties.swift in Sources */,
 				371A7F4F2BCFC0BF00AB6075 /* NetworkManager.swift in Sources */,
+				371A7F552BD014F200AB6075 /* Double+Extension.swift in Sources */,
 				371A7F2C2BCE8FC700AB6075 /* SceneDelegate.swift in Sources */,
 				371A7F522BCFC54F00AB6075 /* NetworkError.swift in Sources */,
 				371A7F462BCE93C600AB6075 /* ProductDTO.swift in Sources */,
