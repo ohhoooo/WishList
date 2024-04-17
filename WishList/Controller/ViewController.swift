@@ -9,11 +9,37 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - properties
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var productTitleLabel: UILabel!
+    @IBOutlet weak var productInformationLabel: UILabel!
+    @IBOutlet weak var productPriceLabel: UILabel!
+    
+    @IBOutlet weak var wishListAddButton: UIButton!
+    @IBOutlet weak var differentProductShowButton: UIButton!
+    @IBOutlet weak var wishListShowButton: UIButton!
+    
+    // MARK: - life cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        configureUI()
     }
-
-
+    
+    // MARK: - methods
+    private func configureUI() {
+        [wishListAddButton, differentProductShowButton, wishListShowButton].forEach { button in
+            button?.layer.cornerRadius = 8
+            button?.clipsToBounds = true
+        }
+    }
+    
+    @IBAction func addToWishList(_ sender: UIButton) {
+    }
+    
+    @IBAction func showDifferentProduct(_ sender: UIButton) {
+    }
+    
+    @IBAction func showWishList(_ sender: UIButton) {
+    }
 }
-
