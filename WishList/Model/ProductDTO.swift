@@ -10,7 +10,12 @@ import Foundation
 struct ProductDTO: Decodable {
     let id: Int
     let title: String
-    let description: String
+    let information: String
     let price: Int
     let thumbnail: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case id, price, title, thumbnail
+        case information = "description"
+    }
 }
