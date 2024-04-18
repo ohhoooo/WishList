@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var differentProductShowButton: UIButton!
     @IBOutlet weak var wishListShowButton: UIButton!
     
+    private let coreDataManager = CoreDataManager.shared
     private let networkManager = NetworkManager.shared
     private var randomID = Int.random(in: 1...100)
     private var product: ProductDTO?
@@ -83,6 +84,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addToWishList(_ sender: UIButton) {
+        if let product, !coreDataManager.contains(productDTO: product) {
+            coreDataManager.saveProduct(productDTO: product) { [weak self] in
+                self?.showAlert(title: "상품을 성공적으로 담았습니다.")
+            }
+        } else {
+            showAlert(title: "이미 존재하는 상품입니다.")
+        }
     }
     
     @IBAction func showDifferentProduct(_ sender: UIButton) {
@@ -90,5 +98,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showWishList(_ sender: UIButton) {
+    }
+    
+    private func showAlert(title: String) {
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let action = UIAlertAction(title: "확인", style: .default)
+        
+        alert.addAction(action)
+        present(alert, animated: true)
     }
 }
