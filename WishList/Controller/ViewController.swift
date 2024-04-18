@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     // MARK: - properties
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productTitleLabel: UILabel!
     @IBOutlet weak var productInformationLabel: UILabel!
@@ -30,6 +32,7 @@ class ViewController: UIViewController {
         
         configureUI()
         configureData()
+        configureRefreshControl()
     }
     
     // MARK: - methods
@@ -67,6 +70,19 @@ class ViewController: UIViewController {
             case .failure(let error):
                 self?.printError(error)
             }
+        }
+    }
+    
+    private func configureRefreshControl() {
+        self.scrollView.refreshControl = UIRefreshControl()
+        self.scrollView.refreshControl?.addTarget(self, action: #selector(refreshScrollView), for: .valueChanged)
+    }
+
+    @objc private func refreshScrollView() {
+        configureData()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [weak self] in
+            self?.scrollView.refreshControl?.endRefreshing()
         }
     }
     
