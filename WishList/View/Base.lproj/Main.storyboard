@@ -109,11 +109,39 @@
                         <outlet property="productTitleLabel" destination="wT4-ks-IXN" id="uEC-V0-Kuk"/>
                         <outlet property="wishListAddButton" destination="RAs-yi-7zs" id="UVS-9e-vcU"/>
                         <outlet property="wishListShowButton" destination="7gd-JM-cdL" id="wFT-nC-Ubw"/>
+                        <segue destination="BrG-ho-hxN" kind="presentation" identifier="toWishListViewController" id="rTx-pe-YoP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="128" y="-34"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lMl-Y1-5be">
+            <objects>
+                <viewController id="BrG-ho-hxN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CbQ-6Q-Hhe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="54e-ye-8lo">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DrV-IO-D00"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="54e-ye-8lo" firstAttribute="leading" secondItem="DrV-IO-D00" secondAttribute="leading" id="5Kd-yU-P3j"/>
+                            <constraint firstItem="DrV-IO-D00" firstAttribute="bottom" secondItem="54e-ye-8lo" secondAttribute="bottom" id="QSh-V5-14U"/>
+                            <constraint firstItem="54e-ye-8lo" firstAttribute="top" secondItem="DrV-IO-D00" secondAttribute="top" id="a0Z-gs-QrC"/>
+                            <constraint firstItem="DrV-IO-D00" firstAttribute="trailing" secondItem="54e-ye-8lo" secondAttribute="trailing" id="wvL-lg-nzE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aw0-dv-SAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137" y="-35"/>
         </scene>
     </scenes>
     <resources>

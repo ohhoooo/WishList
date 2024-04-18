@@ -22,6 +22,9 @@
 		375645B42BD11A78001CBE5F /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375645B22BD11A78001CBE5F /* Product+CoreDataClass.swift */; };
 		375645B52BD11A78001CBE5F /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375645B32BD11A78001CBE5F /* Product+CoreDataProperties.swift */; };
 		375645B72BD11B8B001CBE5F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375645B62BD11B8B001CBE5F /* CoreDataManager.swift */; };
+		375645B92BD16F62001CBE5F /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375645B82BD16F62001CBE5F /* WishListViewController.swift */; };
+		375645BD2BD174AE001CBE5F /* WishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375645BB2BD174AE001CBE5F /* WishListTableViewCell.swift */; };
+		375645BE2BD174AE001CBE5F /* WishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375645BC2BD174AE001CBE5F /* WishListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		375645B22BD11A78001CBE5F /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
 		375645B32BD11A78001CBE5F /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		375645B62BD11B8B001CBE5F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		375645B82BD16F62001CBE5F /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		375645BB2BD174AE001CBE5F /* WishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListTableViewCell.swift; sourceTree = "<group>"; };
+		375645BC2BD174AE001CBE5F /* WishListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				371A7F2D2BCE8FC700AB6075 /* ViewController.swift */,
+				375645B82BD16F62001CBE5F /* WishListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -100,6 +107,7 @@
 		371A7F432BCE930900AB6075 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				375645BA2BD1748A001CBE5F /* Cell */,
 				371A7F2F2BCE8FC700AB6075 /* Main.storyboard */,
 			);
 			path = View;
@@ -148,6 +156,15 @@
 				371A7F542BD014F200AB6075 /* Double+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		375645BA2BD1748A001CBE5F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				375645BB2BD174AE001CBE5F /* WishListTableViewCell.swift */,
+				375645BC2BD174AE001CBE5F /* WishListTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +227,7 @@
 			files = (
 				371A7F412BCE901800AB6075 /* .gitignore in Resources */,
 				371A7F392BCE8FC800AB6075 /* LaunchScreen.storyboard in Resources */,
+				375645BE2BD174AE001CBE5F /* WishListTableViewCell.xib in Resources */,
 				371A7F362BCE8FC800AB6075 /* Assets.xcassets in Resources */,
 				371A7F312BCE8FC700AB6075 /* Main.storyboard in Resources */,
 			);
@@ -223,10 +241,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				375645B52BD11A78001CBE5F /* Product+CoreDataProperties.swift in Sources */,
+				375645B92BD16F62001CBE5F /* WishListViewController.swift in Sources */,
 				371A7F342BCE8FC700AB6075 /* WishList.xcdatamodeld in Sources */,
 				371A7F2E2BCE8FC700AB6075 /* ViewController.swift in Sources */,
 				371A7F2A2BCE8FC700AB6075 /* AppDelegate.swift in Sources */,
 				371A7F4F2BCFC0BF00AB6075 /* NetworkManager.swift in Sources */,
+				375645BD2BD174AE001CBE5F /* WishListTableViewCell.swift in Sources */,
 				371A7F552BD014F200AB6075 /* Double+Extension.swift in Sources */,
 				375645B42BD11A78001CBE5F /* Product+CoreDataClass.swift in Sources */,
 				371A7F2C2BCE8FC700AB6075 /* SceneDelegate.swift in Sources */,
