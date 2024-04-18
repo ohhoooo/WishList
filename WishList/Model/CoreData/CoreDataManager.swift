@@ -14,7 +14,7 @@ final class CoreDataManager {
     static let shared = CoreDataManager()
     private init() { }
     
-    private let modelname = "Product"
+    private let modelName = "Product"
     
     // 앱 델리게이트
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
@@ -23,9 +23,27 @@ final class CoreDataManager {
     lazy var context = appDelegate?.persistentContainer.viewContext
     
     // MARK: - methods
+    func fetchProducts() -> [Product] {
+        var products: [Product] = []
+        
+        if let context = context {
+            let request = NSFetchRequest<NSManagedObject>(entityName: self.modelName)
+            
+            do {
+                if let fetchedProducts = try context.fetch(request) as? [Product] {
+                    products = fetchedProducts
+                }
+            } catch {
+                return products
+            }
+        }
+        
+        return products
+    }
+    
     func contains(productDTO: ProductDTO) -> Bool {
         if let context = context {
-            let request = NSFetchRequest<NSManagedObject>(entityName: self.modelname)
+            let request = NSFetchRequest<NSManagedObject>(entityName: self.modelName)
             request.predicate = NSPredicate(format: "id == %d", Int16(productDTO.id))
             
             do {
@@ -42,7 +60,7 @@ final class CoreDataManager {
     
     func saveProduct(productDTO: ProductDTO, completion: @escaping () -> Void) {
         if let context = context {
-            if let entity = NSEntityDescription.entity(forEntityName: self.modelname, in: context) {
+            if let entity = NSEntityDescription.entity(forEntityName: self.modelName, in: context) {
                 if let product = NSManagedObject(entity: entity, insertInto: context) as? Product {
                     product.id = Int16(productDTO.id)
                     product.title = productDTO.title
