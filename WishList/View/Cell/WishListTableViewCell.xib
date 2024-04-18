@@ -33,7 +33,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="productTitleLabel" destination="OfC-pD-qZx" id="PSl-ti-bsu"/>
+                <outlet property="productLabel" destination="OfC-pD-qZx" id="kMC-ex-uJr"/>
             </connections>
             <point key="canvasLocation" x="50.381679389312978" y="5.9859154929577469"/>
         </tableViewCell>

@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="128" y="-34"/>
         </scene>
-        <!--View Controller-->
+        <!--Wish List View Controller-->
         <scene sceneID="lMl-Y1-5be">
             <objects>
-                <viewController id="BrG-ho-hxN" sceneMemberID="viewController">
+                <viewController id="BrG-ho-hxN" customClass="WishListViewController" customModule="WishList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CbQ-6Q-Hhe">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,6 +138,9 @@
                             <constraint firstItem="DrV-IO-D00" firstAttribute="trailing" secondItem="54e-ye-8lo" secondAttribute="trailing" id="wvL-lg-nzE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="54e-ye-8lo" id="f2h-oe-0qZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aw0-dv-SAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
