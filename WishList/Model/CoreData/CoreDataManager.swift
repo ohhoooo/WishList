@@ -23,6 +23,23 @@ final class CoreDataManager {
     lazy var context = appDelegate?.persistentContainer.viewContext
     
     // MARK: - methods
+    func contains(productDTO: ProductDTO) -> Bool {
+        if let context = context {
+            let request = NSFetchRequest<NSManagedObject>(entityName: self.modelname)
+            request.predicate = NSPredicate(format: "id == %d", Int16(productDTO.id))
+            
+            do {
+                if let fetchedProducts = try context.fetch(request) as? [Product] {
+                    return (productDTO.id == (fetchedProducts.first?.id ?? -1)) ? true : false
+                }
+            } catch {
+                return false
+            }
+        }
+        
+        return false
+    }
+    
     func saveProduct(productDTO: ProductDTO, completion: @escaping () -> Void) {
         if let context = context {
             if let entity = NSEntityDescription.entity(forEntityName: self.modelname, in: context) {
