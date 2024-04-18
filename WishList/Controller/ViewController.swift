@@ -98,6 +98,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showWishList(_ sender: UIButton) {
+        if coreDataManager.fetchProducts().isEmpty {
+            showAlert(title: "위시 리스트가 존재하지 않습니다.")
+        } else {
+            performSegue(withIdentifier: "toWishListViewController", sender: nil)
+        }
     }
     
     private func showAlert(title: String) {
