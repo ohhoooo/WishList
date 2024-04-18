@@ -74,4 +74,24 @@ final class CoreDataManager {
         }
         completion()
     }
+    
+    func deleteProduct(product: Product, completion: @escaping () -> Void) {
+        if let context = context {
+            let request = NSFetchRequest<NSManagedObject>(entityName: self.modelName)
+            request.predicate = NSPredicate(format: "id == %d", Int16(product.id))
+            
+            do {
+                if let fetchedProduct = try context.fetch(request) as? [Product] {
+                    if let targetProduct = fetchedProduct.first {
+                        context.delete(targetProduct)
+                        appDelegate?.saveContext()
+                    }
+                }
+                completion()
+            } catch {
+                print(error)
+                completion()
+            }
+        }
+    }
 }
