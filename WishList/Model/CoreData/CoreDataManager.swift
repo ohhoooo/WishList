@@ -23,4 +23,20 @@ final class CoreDataManager {
     lazy var context = appDelegate?.persistentContainer.viewContext
     
     // MARK: - methods
+    func saveProduct(productDTO: ProductDTO, completion: @escaping () -> Void) {
+        if let context = context {
+            if let entity = NSEntityDescription.entity(forEntityName: self.modelname, in: context) {
+                if let product = NSManagedObject(entity: entity, insertInto: context) as? Product {
+                    product.id = Int16(productDTO.id)
+                    product.title = productDTO.title
+                    product.information = productDTO.information
+                    product.price = productDTO.price
+                    product.thumbnail = productDTO.thumbnail
+                    
+                    appDelegate?.saveContext()
+                }
+            }
+        }
+        completion()
+    }
 }
