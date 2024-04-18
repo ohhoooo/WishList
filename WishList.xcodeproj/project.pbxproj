@@ -21,6 +21,7 @@
 		371A7F552BD014F200AB6075 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A7F542BD014F200AB6075 /* Double+Extension.swift */; };
 		375645B42BD11A78001CBE5F /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375645B22BD11A78001CBE5F /* Product+CoreDataClass.swift */; };
 		375645B52BD11A78001CBE5F /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375645B32BD11A78001CBE5F /* Product+CoreDataProperties.swift */; };
+		375645B72BD11B8B001CBE5F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375645B62BD11B8B001CBE5F /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		371A7F542BD014F200AB6075 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		375645B22BD11A78001CBE5F /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
 		375645B32BD11A78001CBE5F /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		375645B62BD11B8B001CBE5F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				375645B22BD11A78001CBE5F /* Product+CoreDataClass.swift */,
 				375645B32BD11A78001CBE5F /* Product+CoreDataProperties.swift */,
+				375645B62BD11B8B001CBE5F /* CoreDataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				371A7F2C2BCE8FC700AB6075 /* SceneDelegate.swift in Sources */,
 				371A7F522BCFC54F00AB6075 /* NetworkError.swift in Sources */,
 				371A7F462BCE93C600AB6075 /* ProductDTO.swift in Sources */,
+				375645B72BD11B8B001CBE5F /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
