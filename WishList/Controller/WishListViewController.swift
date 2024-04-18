@@ -37,7 +37,32 @@ class WishListViewController: UIViewController {
 }
 
 extension WishListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteContextualAction = UIContextualAction(style: .normal, title: nil) { (_, _, success: @escaping (Bool) -> Void) in
+            let alert = UIAlertController(title: "정말로 삭제 하시겠습니까?", message: nil, preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "취소", style: .cancel)
+            let checkAction = UIAlertAction(title: "확인", style: .default) { [weak self] _ in
+                if let targetProduct = self?.products[indexPath.row] {
+                    self?.coreDataManager.deleteProduct(product: targetProduct) {
+                        self?.configureData()
+                        self?.tableView.deleteRows(at: [indexPath], with: .fade)
+                        success(true)
+                    }
+                }
+            }
+            
+            alert.addAction(checkAction)
+            alert.addAction(cancelAction)
+            
+            self.present(alert, animated: true)
+        }
+        
+        deleteContextualAction.backgroundColor = .systemRed
+        deleteContextualAction.image = UIImage(systemName: "trash.fill")
+        
+        return UISwipeActionsConfiguration(actions: [deleteContextualAction])
+    }
 }
 
 extension WishListViewController: UITableViewDataSource {
