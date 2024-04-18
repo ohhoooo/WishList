@@ -2,7 +2,7 @@
 //  Product+CoreDataClass.swift
 //  WishList
 //
-//  Created by 김정호 on 4/17/24.
+//  Created by 김정호 on 4/18/24.
 //
 //
 

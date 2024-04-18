@@ -2,7 +2,7 @@
 //  Product+CoreDataProperties.swift
 //  WishList
 //
-//  Created by 김정호 on 4/17/24.
+//  Created by 김정호 on 4/18/24.
 //
 //
 
@@ -16,11 +16,11 @@ extension Product {
         return NSFetchRequest<Product>(entityName: "Product")
     }
 
-    @NSManaged public var thumbnail: String?
-    @NSManaged public var information: String?
-    @NSManaged public var title: String?
     @NSManaged public var id: Int16
-    @NSManaged public var price: Int16
+    @NSManaged public var information: String?
+    @NSManaged public var price: Double
+    @NSManaged public var thumbnail: String?
+    @NSManaged public var title: String?
 
 }
 
